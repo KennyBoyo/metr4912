@@ -6,19 +6,26 @@ int main() {
     // Model model = Model("$HOME/Downloads/MobL_ARMS_OpenSim41_unimanual_tutorial/MoBL-ARMS Upper Extremity Model/Model/4.1/MOBL_ARMS_fixed_41.osim");
     
 
-    Model model = Model("./MoBL_ARMS_bimanual_6_2_21.osim");
+    // Model model = Model("./MoBL_ARMS_bimanual_6_2_21.osim");
+    
+    Model model = Model("./os4bimanual.osim");
     // Model model = Model("./MOBL_ARMS_fixed_41.osim");
     model.setName("bimanual");
     model.setUseVisualizer(true);
     BodySet bs = model.get_BodySet();
-    std::cout << bs.get("thorax");
+    JointSet js = model.get_JointSet();
+    std::cout << bs;
+    std::cout << "\n";
+    std::cout << js;
+    std::cout << "\n";
+    // std::cout << bs.get("thorax");
 
-    PinJoint* ground = new PinJoint("ground", 
-        model.getGround(), Vec3(0), Vec3(0), 
-        bs.get("thorax"), Vec3(0), Vec3(0)
-    );
+    // PinJoint* ground = new PinJoint("ground", 
+    //     model.getGround(), Vec3(0), Vec3(0), 
+    //     bs.get("thorax"), Vec3(0), Vec3(0)
+    // );
 
-    model.addJoint(ground);
+    // model.addJoint(ground);
 
     // PinJoint* elbow = new PinJoint("elbow",
     //         *humerus, Vec3(0, -0.5, 0), Vec3(0),
@@ -88,6 +95,10 @@ int main() {
 
     // Configure the model.
     State& state = model.initSystem();
+
+    // print model in osim format
+    // model.print("os4bimanual.osim");
+    
     // Fix the shoulder at its default angle and begin with the elbow flexed.
     // shoulder->getCoordinate().setLocked(state, true);
     // elbow->getCoordinate().setValue(state, 0.5 * Pi);

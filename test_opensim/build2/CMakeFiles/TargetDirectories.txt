@@ -1,0 +1,4 @@
+/home/kenzo/documents/metr4912/test_opensim/build2/CMakeFiles/opensim_test.dir
+/home/kenzo/documents/metr4912/test_opensim/build2/CMakeFiles/opensim_import_test.dir
+/home/kenzo/documents/metr4912/test_opensim/build2/CMakeFiles/edit_cache.dir
+/home/kenzo/documents/metr4912/test_opensim/build2/CMakeFiles/rebuild_cache.dir
