@@ -9431,3 +9431,8 @@
 [2023-03-07 01:52:01.429] [warning] Body 'thorax' is massless but nonzero inertia provided.
 [2023-03-07 01:52:01.429] [warning]  Inertia reset to zero. Otherwise provide nonzero mass.
 [2023-03-07 01:52:02.847] [cout] [info] A visualizer window has opened.
+[2023-03-07 02:00:50.299] [info] Loaded model bimanual from file ./os4bimanual.osim
+[2023-03-07 02:00:51.979] [cout] [info] A visualizer window has opened.
+[2023-03-07 02:04:26.213] [info] Loaded model bimanual from file ./os4bimanual.osim
+[2023-03-07 02:04:38.217] [info] Loaded model bimanual from file ./os4bimanual.osim
+[2023-03-07 02:04:39.712] [cout] [info] A visualizer window has opened.
