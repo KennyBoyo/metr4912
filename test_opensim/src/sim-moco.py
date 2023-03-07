@@ -1,7 +1,7 @@
 import opensim as osim
 from mocolib import *
 
-modelFile = "./MoBL_ARMS_bimanual_6_2_21.osim"
+modelFile = "../models/os4bimanual/os4bimanual.osim"
 
 
 # model = osim.Model(modelFile)

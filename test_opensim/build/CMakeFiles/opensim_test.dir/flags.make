@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DOPENSIM_WITH_CASADI -DOPENSIM_WITH_TROPTER -DSPDLOG_COMPILED_LIB
 
-CXX_INCLUDES = -isystem /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/include -isystem /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/include/simbody -isystem /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/include/OpenSim 
+CXX_INCLUDES = -isystem /home/medrobotics/opensim-core/sdk/include -isystem /home/medrobotics/opensim-core/sdk/Simbody/include/simbody -isystem /home/medrobotics/opensim-core/sdk/include/OpenSim -isystem /home/medrobotics/opensim-core/sdk/spdlog/include 
 

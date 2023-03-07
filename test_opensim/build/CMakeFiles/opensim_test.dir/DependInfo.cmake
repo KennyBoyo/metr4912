@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/medrobotics/Documents/test_opensim/src/opensim-test.cpp" "/home/medrobotics/Documents/test_opensim/build/CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o"
+  "/home/medrobotics/Documents/metr4912/test_opensim/src/opensim-test.cpp" "/home/medrobotics/Documents/metr4912/test_opensim/build/CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,9 +17,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/include"
-  "/home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/include/simbody"
-  "/home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/include/OpenSim"
+  "/home/medrobotics/opensim-core/sdk/include"
+  "/home/medrobotics/opensim-core/sdk/Simbody/include/simbody"
+  "/home/medrobotics/opensim-core/sdk/include/OpenSim"
+  "/home/medrobotics/opensim-core/sdk/spdlog/include"
   )
 
 # Targets to which this target links.

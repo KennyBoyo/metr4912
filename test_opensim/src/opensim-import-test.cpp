@@ -8,7 +8,7 @@ int main() {
 
     // Model model = Model("./MoBL_ARMS_bimanual_6_2_21.osim");
     
-    Model model = Model("./os4bimanual.osim");
+    Model model = Model("../models/os4bimanual/os4bimanual.osim");
     // Model model = Model("./MOBL_ARMS_fixed_41.osim");
     model.setName("bimanual");
     model.setUseVisualizer(true);

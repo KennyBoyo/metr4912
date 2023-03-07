@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/medrobotics/Documents/test_opensim
+CMAKE_SOURCE_DIR = /home/medrobotics/Documents/metr4912/test_opensim
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/medrobotics/Documents/test_opensim/build
+CMAKE_BINARY_DIR = /home/medrobotics/Documents/metr4912/test_opensim/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/opensim_test.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/opensim_test.dir/flags.make
 
 CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o: CMakeFiles/opensim_test.dir/flags.make
 CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o: ../src/opensim-test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/medrobotics/Documents/test_opensim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o -c /home/medrobotics/Documents/test_opensim/src/opensim-test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/medrobotics/Documents/metr4912/test_opensim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o -c /home/medrobotics/Documents/metr4912/test_opensim/src/opensim-test.cpp
 
 CMakeFiles/opensim_test.dir/src/opensim-test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opensim_test.dir/src/opensim-test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/medrobotics/Documents/test_opensim/src/opensim-test.cpp > CMakeFiles/opensim_test.dir/src/opensim-test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/medrobotics/Documents/metr4912/test_opensim/src/opensim-test.cpp > CMakeFiles/opensim_test.dir/src/opensim-test.cpp.i
 
 CMakeFiles/opensim_test.dir/src/opensim-test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opensim_test.dir/src/opensim-test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/medrobotics/Documents/test_opensim/src/opensim-test.cpp -o CMakeFiles/opensim_test.dir/src/opensim-test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/medrobotics/Documents/metr4912/test_opensim/src/opensim-test.cpp -o CMakeFiles/opensim_test.dir/src/opensim-test.cpp.s
 
 # Object files for target opensim_test
 opensim_test_OBJECTS = \
@@ -79,26 +79,21 @@ opensim_test_EXTERNAL_OBJECTS =
 
 opensim_test: CMakeFiles/opensim_test.dir/src/opensim-test.cpp.o
 opensim_test: CMakeFiles/opensim_test.dir/build.make
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimExampleComponents.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimMoco.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimTools.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimAnalyses.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimActuators.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimSimulation.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimCommon.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libSimTKsimbody.so.3.8
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libSimTKmath.so.3.8
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libSimTKcommon.so.3.8
-opensim_test: /usr/lib/x86_64-linux-gnu/libf77blas.so
-opensim_test: /usr/lib/x86_64-linux-gnu/libatlas.so
-opensim_test: /usr/lib/x86_64-linux-gnu/liblapack.so
-opensim_test: /usr/lib/x86_64-linux-gnu/libf77blas.so
-opensim_test: /usr/lib/x86_64-linux-gnu/libatlas.so
-opensim_test: /usr/lib/x86_64-linux-gnu/liblapack.so
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/spdlog/libspdlog.a
-opensim_test: /home/medrobotics/Libraries/opensim-core-source/opensim-core-4.3-install/lib/libosimLepton.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimExampleComponents.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimMoco.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimTools.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimAnalyses.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimActuators.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimSimulation.so
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimCommon.so
+opensim_test: /home/medrobotics/opensim-core/sdk/Simbody/lib/libSimTKsimbody.so.3.8
+opensim_test: /home/medrobotics/opensim-core/sdk/Simbody/lib/libSimTKmath.so.3.8
+opensim_test: /home/medrobotics/opensim-core/sdk/Simbody/lib/libSimTKcommon.so.3.8
+opensim_test: /usr/lib/x86_64-linux-gnu/libopenblas.so
+opensim_test: /home/medrobotics/opensim-core/sdk/spdlog/lib/spdlog/libspdlog.a
+opensim_test: /home/medrobotics/opensim-core/sdk/lib/libosimLepton.so
 opensim_test: CMakeFiles/opensim_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/medrobotics/Documents/test_opensim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable opensim_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/medrobotics/Documents/metr4912/test_opensim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable opensim_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opensim_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +106,6 @@ CMakeFiles/opensim_test.dir/clean:
 .PHONY : CMakeFiles/opensim_test.dir/clean
 
 CMakeFiles/opensim_test.dir/depend:
-	cd /home/medrobotics/Documents/test_opensim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/medrobotics/Documents/test_opensim /home/medrobotics/Documents/test_opensim /home/medrobotics/Documents/test_opensim/build /home/medrobotics/Documents/test_opensim/build /home/medrobotics/Documents/test_opensim/build/CMakeFiles/opensim_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/medrobotics/Documents/metr4912/test_opensim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/medrobotics/Documents/metr4912/test_opensim /home/medrobotics/Documents/metr4912/test_opensim /home/medrobotics/Documents/metr4912/test_opensim/build /home/medrobotics/Documents/metr4912/test_opensim/build /home/medrobotics/Documents/metr4912/test_opensim/build/CMakeFiles/opensim_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/opensim_test.dir/depend
 
