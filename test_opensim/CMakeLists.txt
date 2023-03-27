@@ -18,4 +18,5 @@ message (STATUS "${Simbody_LIBRARIES}")
     add_executable(opensim_import_test src/opensim-import-test.cpp)
     target_link_libraries(opensim_test ${Simbody_LIBRARIES} ${OpenSim_LIBRARIES})
     target_link_libraries(opensim_import_test ${Simbody_LIBRARIES} ${OpenSim_LIBRARIES})
+    
 endif()
