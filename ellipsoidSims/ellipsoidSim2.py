@@ -12,12 +12,55 @@ def rotation_matrix_from_vectors(vec1, vec2):
     v = np.cross(a, b)
     c = np.dot(a, b)
     s = np.linalg.norm(v)
-    kmat = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [-v[1], v[0], 0]])
-    rotation_matrix = np.eye(3) + kmat + kmat.dot(kmat) * ((1 - c) / (s ** 2))
     if (s == 0):
         print(s)
         return np.eye(3)
+    kmat = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [-v[1], v[0], 0]])
+    rotation_matrix = np.eye(3) + kmat + kmat.dot(kmat) * ((1 - c) / (s ** 2))
     return rotation_matrix
+
+
+def get_perpendicular_vectors(vec):
+    v1 = np.array([-vec[1], vec[1], 0])
+    v2 = np.cross(vec, v1)
+    return v1, v2
+
+def get_stiffness_matrix(v0, mag):
+    v1, v2 = get_perpendicular_vectors(v0)
+    v0 = v0/np.linalg.norm(v0)
+    v1 = v1/np.linalg.norm(v1)/3
+    v2 = v2/np.linalg.norm(v2)/3
+    k_mat = np.zeros((3,3))
+    k_mat[0][0] = mag
+    k_mat[1][1] = mag/3
+    k_mat[2][2] = mag/3
+    
+    rot_v0 = rotation_matrix_from_vectors(k_mat[:, 0], v0)
+    rot_v1 = rotation_matrix_from_vectors(k_mat[:, 1], v1)
+    rot_v2 = rotation_matrix_from_vectors(k_mat[:, 2], v2)
+    print(rot_v0)
+
+
+    # print(k_mat[:, 0])
+    # print(k_mat[:, 1])
+    # print(k_mat[:, 2])
+    r0 = rot_v0 @ v0 
+    r1 = rot_v0 @ v1
+    r2 = rot_v0 @ v2
+
+    k_mat[:, 0] = r0.T
+    k_mat[:, 1] = r1.T
+    k_mat[:, 2] = r2.T
+
+
+    print(v0)
+    print(v1)
+    print(v2)
+
+
+    return k_mat
+
+    
 
 #### ELLIPSOID
 ellipseSteps= 100
@@ -41,7 +84,7 @@ fig = plt.figure(figsize=plt.figaspect(1))  # Square figure
 ax = fig.add_subplot(111, projection='3d')
 ax.plot3D(line_x, line_y, line_z, color='r')
 
-vec2 = np.array([1, 1, 1])
+vec2 = np.array([1, 0, 0])
 line2_x = np.array([0, vec2[0]])
 line2_y = np.array([0, vec2[1]])
 line2_z = np.array([0, vec2[2]])
@@ -77,14 +120,19 @@ rotated_z = rotated[2]
 mag = 10
 k_mat = np.zeros((3,3))
 k_mat[0][0] = mag
-k_mat[1][1] = np.sqrt(mag/3)
-k_mat[2][2] = np.sqrt(mag/3)
-print(rotation)
-print(k_mat)
+k_mat[1][1] = mag/3
+k_mat[2][2] = mag/3
+# print(rotation)
+# print(k_mat)
 
 k_mat = rotation @ k_mat
 
-print(k_mat)
+print(k_mat @ rotation @ k_mat)
+
+# print(get_stiffness_matrix(vec, mag))
+# print(k_mat)
+
+# print(k_mat)
 for i in range(3):
     # ax.quiver(0, 0, 0, k_mat[i][0], k_mat[i][1], k_mat[i][2], length = 1)
     ax.quiver(0, 0, 0, k_mat[0][i], k_mat[1][i], k_mat[2][i], length = 1)
