@@ -181,7 +181,7 @@ k_mat[2][2] = 1
 
 # k_mat = np.linalg.inv(k_mat.T) @ rotation @ np.linalg.inv(k_mat)
 
-k_mat = rotation.T @ k_mat @ rotation
+k_mat = rotation @ k_mat @ rotation.T
 
 # print(k_mat.T @ rotation @ k_mat)
 # print(rotation.T @ k_mat @ rotation)

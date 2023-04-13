@@ -56,7 +56,7 @@ k_mat[1][1] = 2
 k_mat[2][2] = 2
 
 # Rotate covariance matrix
-k_mat = rotation.T @ k_mat @ rotation
+k_mat = rotation @ k_mat @ rotation.T
 
 # Get Eigenvectors which are the principal directions of the ellipsoid
 w, v = np.linalg.eig(k_mat)
