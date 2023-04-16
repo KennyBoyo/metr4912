@@ -27400,31 +27400,39 @@
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 0 0</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
-					<fixed>true</fixed>
+					<fixed>false</fixed>
 				</Marker>
 				<Marker name="humerus_epicondyle_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/jointset/elbow_r/humerus_r_offset</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 0 0</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
 				</Marker>
 				<Marker name="humerus_epicondyle_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/jointset/elbow_l/humerus_l_offset</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 0 0</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
 				</Marker>
 				<Marker name="radius_styloid_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/jointset/wrist_hand_l/hand_l_offset</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 0 0</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
 				</Marker>
 				<Marker name="radius_styloid_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/jointset/wrist_hand_r/hand_r_offset</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 0 0</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
 				</Marker>
 			</objects>
 			<groups />
