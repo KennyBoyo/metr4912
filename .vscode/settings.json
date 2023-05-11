@@ -1,3 +1,10 @@
 {
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "files.associations": {
+        "bitset": "cpp",
+        "forward_list": "cpp",
+        "fstream": "cpp",
+        "ostream": "cpp",
+        "atomic": "cpp"
+    }
 }
